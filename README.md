@@ -40,7 +40,41 @@ Although we have installed `sinon` and `chai` they need to be added to your `kar
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'requirejs', 'chai`, `sinon`]
     
-## Adding a Non-Karma Plugin
+## Correcting Script Paths
+
+`test-main.js` is meant to emulate `main.js` with the only difference that they 
+have will not resolve `require`'d paths the same.  In an effort to not have two 
+sets of paths that must be maintained, we have to update our `baseUrl`
+
+    require.config({
+      // Karma serves files under /base, which is the basePath from your config file
+      baseUrl: '/base/src/js/',
+
+      // dynamically load all test files
+      deps: allTestFiles,
+
+      // we have to kickoff jasmine, as it is asynchronous
+      callback: window.__karma__.start
+    });
+
+This means RequireJS will grab files from the same location for both main files. 
+
+    // Get a list of all the test files to include
+    Object.keys(window.__karma__.files).forEach(function(file) {
+      if (TEST_REGEXP.test(file)) {
+        // Normalize paths to RequireJS module names.
+        // If you require sub-dependencies of test files to be loaded as-is (requiring file extension)
+        // then do not normalize the paths
+        var normalizedTestModule = file.replace(/^\/base\/|\.js$/g, '');
+        // We now step back two directories to the root of our app
+        normalizedTestModule = '../../' + normalizedTestModule;
+        allTestFiles.push(normalizedTestModule);
+      }
+    });
+
+`npm test`
+
+Your tests should run again.
 
 ### Possible Errors
 
