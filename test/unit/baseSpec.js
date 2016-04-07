@@ -1,6 +1,12 @@
-define(['src/js/app', 'test/lib/dep-loader'], function() {
+define(['app', '../../test/lib/dep-loader'], function(app, depLoader) {
+  var filterService;
+  
   beforeEach(function(done) {
-    
+    depLoader('service/filter')
+    .then(function(module) {
+      filterService = module;
+      done();
+    });
   });
   
   describe('App module', function() {

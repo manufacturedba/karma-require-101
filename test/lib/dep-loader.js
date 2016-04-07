@@ -8,16 +8,16 @@ define(function() {
     var temp = {};
 
     for (var key in obj) {
-      temp[key] = clone(obj[key]);
+      temp[key] = _clone(obj[key]);
     }
 
     return temp;
   }
   
   return function(path) {
-    new Promise(function(resolve, reject) {
-      require(['path'], function(module) {
-        return _clone(module);
+    return new Promise(function(resolve, reject) {
+      require([path], function(module) {
+         resolve(_clone(module));
       });
     });
   };
