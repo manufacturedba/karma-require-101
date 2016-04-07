@@ -1,4 +1,4 @@
-## From Scratch
+## Installing Karma
 
 `karma` will need to be installed twice. Install globally to add its binary to your path.  
 When running `karma` through `package.json` scripts, you will need to have a local copy with a specified version.

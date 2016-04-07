@@ -1,0 +1,25 @@
+{
+  "name": "karma-require-101",
+  "description": "Learning Karma with Require JS",
+  "main": "src/js/main.js",
+  "authors": [
+    "Roberto Rodriguez <roberto@thinkcrunch.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "101"
+  ],
+  "homepage": "https://github.com/manufacturedba/karma-require-101",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.2.0"
+  }
+}
