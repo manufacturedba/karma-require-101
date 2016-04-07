@@ -20,7 +20,7 @@ After we have our configurations, we will need a few plugins to get going.
 
 If you have a library that is incompatible with Karma's plugin loader, you can 
 add its files manually to the top of `files` in `karma.conf.js`. They should run 
-immediately so there is no need to not include them. *Order does matter*
+immediately so there is no need to not include them. More on this below. *Order does matter*
 
 `npm install karma-mocha mocha karma-requirejs requirejs karma-chai chai karma-sinon sinon --save-dev`
 
@@ -39,6 +39,8 @@ Although we have installed `sinon` and `chai` they need to be added to your `kar
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'requirejs', 'chai`, `sinon`]
+    
+## Adding a Non-Karma Plugin
 
 ### Possible Errors
 

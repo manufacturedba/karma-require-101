@@ -24,7 +24,6 @@
     "karma-mocha": "^0.2.2",
     "karma-requirejs": "^0.2.6",
     "karma-sinon": "^1.0.4",
-    "lodash.clonedeep": "^4.3.2",
     "mocha": "^2.4.5",
     "requirejs": "^2.2.0",
     "sinon": "^1.17.3"

@@ -33,7 +33,7 @@ This repo is set up for **Chrome**.
 This project is structured with all source code in `src/js` and tests in `test/unit`
 
 `src/js/**/*.js`
-`test/unit/**/*Spec.js`
+`test/unit/**/*.js`
 
 `"Should any of the files included by the previous patterns be excluded ?"`
 
