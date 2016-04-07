@@ -1,0 +1,22 @@
+{
+  "name": "karma-require-101",
+  "version": "0.0.1",
+  "description": "Learning Karma with Require JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/manufacturedba/karma-require-101.git"
+  },
+  "author": "Roberto Rodriguez <roberto@thinkcrunch.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manufacturedba/karma-require-101/issues"
+  },
+  "homepage": "https://github.com/manufacturedba/karma-require-101#readme",
+  "devDependencies": {
+    "karma": "^0.13.22"
+  }
+}
